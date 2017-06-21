@@ -1,0 +1,14 @@
+// container
+.container {
+    @extend %clearfix;
+    max-width: 1008px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+// wrapper
+#wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}

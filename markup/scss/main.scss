@@ -31,6 +31,6 @@ $media-expressions: (
 @import 'base/typography';
 @import 'base/forms';
 
-#wrapper {
-  max-width: 1000px;
-}
+@import 'components/general';
+@import 'components/header';
+@import 'components/footer';
