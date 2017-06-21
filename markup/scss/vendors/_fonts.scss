@@ -1,0 +1,8 @@
+// fonts
+
+@include font-face("helveticaNeueLTStd", ("../fonts/helveticaNeueLTStd-BdCn"), 700, normal);
+@include font-face("helveticaNeueLTStd", ("../fonts/helveticaNeueLTStd-Cn"), 400, normal);
+@include font-face("helveticaNeueLTStd", ("../fonts/helveticaNeueLTStd-LtCn"), 300, normal);
+@include font-face("helveticaNeueLTStd", ("../fonts/helveticaNeueLTStd-MddCn"), 500, normal);
+@include font-face("helveticaNeueLTStd", ("../fonts/helveticaNeueLTStd-ThCn"), 200, normal);
+@include font-face("helveticaNeueLTStd", ("../fonts/helveticaNeueLTStd-UltLtCn"), 100, normal);
