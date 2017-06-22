@@ -1,6 +1,7 @@
 $breakpoints: (
-  'xs-phone': 320px,
+  'xs-phone': 375px,
   'phone': 480px,
+  'xs-tablet': 640px,
   'tablet': 768px,
   'desktop': 1024px,
   'widescreen': 1200px
@@ -34,3 +35,4 @@ $media-expressions: (
 @import 'components/general';
 @import 'components/header';
 @import 'components/footer';
+@import 'components/btm-content';

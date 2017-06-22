@@ -18,8 +18,15 @@ textarea {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   box-sizing: border-box;
-  border: 1px solid $form-element-border-color;
-  padding: $form-element-padding;
+  border: none;
+  outline: none;
+  background: $dove-gray;
+  height: 28px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: $white;
+  padding: 6px 10px 2px;
+  width: 100%;
 
   // &:hover {
     
@@ -41,6 +48,7 @@ select {
 textarea {
   resize: vertical;
   vertical-align: top;
+  height: auto;
 }
 
 button,
@@ -48,8 +56,18 @@ input[type='button'],
 input[type='reset'],
 input[type='file'],
 input[type='submit'] {
+  @include animate(color background border-color);
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   cursor: pointer;
+  border: none;
+  outline: none;
+  background: $cardinal;
+  color: #e4e4e4;
+  padding: 3px 13px 0px;
+
+  &:hover {
+    background: darken($cardinal, 10%);
+  }
 }
 
