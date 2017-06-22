@@ -67,11 +67,27 @@
                 border-right: 1px solid rgba(191, 30, 44, 0.52);
                 box-shadow: 1px 0 0 0 rgba(144, 13, 13, 0.37)
             }
+
+            &:last-child {
+                @include media('>=tablet') {
+                    border-right: none;
+                    box-shadow: none;
+                }
+            }
         }
 
         .active a,
         a:hover {
             background: linear-gradient(to bottom, #9a1723 0%,#c12331 100%);
+        }
+
+        .active a {
+            &:before,
+            &:after {
+                @include media('>=tablet') {
+                    opacity: 1;
+                }
+            }
         }
 
         a {
@@ -80,6 +96,36 @@
             text-align: center;
             text-decoration: none;
             color: #e6b7a9;
+            overflow: hidden;
+            position: relative;
+
+            @include media('<tablet') {
+                padding: 17px 14px 11px;
+            }
+
+            &:before,
+            &:after {
+                @include animate(opacity);
+                content: '';
+                position: absolute;
+                top: -4px;
+                bottom: -4px;
+                width: 25px;
+                box-shadow: 0 0 6px rgba($black, 0.6);
+                border-radius: 36px;
+                background: rgba($black, 0.6);
+                opacity: 0;
+            }
+
+            &:before {
+                left: 100%;
+                margin-left: -1px;
+            }
+
+            &:after {
+                right: 100%;
+                margin-right: -1px;
+            }
         }
     }
 }

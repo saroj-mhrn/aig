@@ -1,0 +1,1082 @@
+// ---------------------------------------------------------===
+// Others styles
+// ---------------------------------------------------------===
+
+// hero
+.hero {
+    padding: 200px 0 120px;
+    position: relative;
+    min-height: 736px;
+
+    @include media('<tablet') {
+        padding: 81px 0 97px;
+        min-height: 400px;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 207px;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(193,35,49,0) 100%);
+    }
+
+    .container {
+        max-width: 970px;
+    }
+
+    .text-wrap {
+        max-width: 417px;
+    }
+
+    h1 {
+        font-size: 128px;
+        line-height: 1;
+        color: $red;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin-bottom: -20px;
+
+        @include media('<tablet') {
+            font-size: 87px;
+            margin-bottom: -11px;
+        }
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 7px;
+        padding: 0 10px;
+
+        @include media('<tablet') {
+            font-size: 20px;
+        }
+
+        span {
+            background: $red;
+            color: $white;
+            padding: 10px 3px 2px;
+
+            @include media('<tablet') {
+                padding-top: 9px;
+            }
+        }
+    }
+}
+
+// section article
+.section-article {
+    background: $red;
+    padding: 137px 0 20px;
+
+    @include media('<tablet') {
+        padding: 10px 0 20px;
+    }
+
+    .container {
+        max-width: 1069px;
+    }
+
+    .box {
+        background: $white;
+        padding: 119px 159px 69px 43px;
+        width: 56.1%;
+        float: left;
+        margin: -200px -8.1% 0 0;
+        position: relative;
+        z-index: 1;
+        font-size: 34px;
+        line-height: 1;
+        box-shadow: 10px 10px 10px rgba($black, 0.4);
+
+        @include media('<desktop') {
+            padding: 118px 103px 41px 30px;
+        }
+
+        @include media('<tablet') {
+            float: none;
+            width: auto;
+            margin: -58px 0 -41px;
+            padding: 69px 24px 55px;
+            font-size: 26px;
+        }
+    }
+
+    .img {
+        width: 51.1%;
+        float: left;
+        position: relative;
+        z-index: 2;
+        margin-bottom: -103px;
+        box-shadow: 10px 10px 10px rgba($black, 0.4);
+
+        @include media('<tablet') {
+            width: auto;
+            float: none;
+            margin: 0 16px -103px;
+        }
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            left: -4px;
+            top: -26px;
+            width: 6px;
+            height: 50px;
+            background: $red;
+        }
+
+        &:after {
+            height: 6px;
+            width: 50px;
+            top: -3px;
+            left: -28px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .plus-lg {
+            right: 0;
+            top: 0;
+            z-index: 2;
+        }
+    }
+
+    h2 {
+        font-size: 53px;
+        line-height: 1;
+        font-weight: 400;
+        margin-bottom: 22px;
+        text-transform: uppercase;
+
+        @include media('<desktop') {
+            font-size: 38px;
+        }
+
+        @include media('<tablet') {
+            font-size: 34px;
+        }
+
+        a {
+            text-decoration: none;
+            color: $red;
+        }
+    }
+}
+
+// section partner
+.section-partner {
+    .top {
+        padding-top: 151px;
+        padding-bottom: 41px;
+        text-align: center;
+        font-size: 35px;
+        line-height: 1;
+        font-weight: 300;
+        max-width: 771px;
+        position: relative;
+        z-index: 1;
+
+        @include media('<desktop') {
+            font-size: 30px;
+            max-width: 638px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 20%;
+            top: -78px;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 711px;
+            height: 712px;
+            z-index: -1;
+            background: url('../images/arrow01.png') no-repeat 0 0/cover;
+
+            @include media('<desktop') {
+                width: 420px;
+                height: 420px;
+                top: -47px;
+            }
+
+            @include media('<tablet') {
+                width: 260px;
+                height: 260px;
+                top: -33px;
+            }
+        }
+
+        h2 {
+            font-size: 69px;
+            line-height: 0.91;
+            font-weight: 100;
+            color: $red;
+            margin-bottom: 10px;
+
+            @include media('<desktop') {
+                font-size: 52px;
+            }
+
+            @include media('<tablet') {
+                font-size: 40px;
+            }
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 18px;
+        }
+    }
+
+    .img-area {
+        min-height: 517px;
+        padding: 40px 0 1px;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        z-index: 4;
+    }
+
+    .box {
+        background: $white;
+        padding: 59px 24px 47px 32px;
+        margin-bottom: -48px;
+        max-width: 383px;
+        float: left;
+        position: relative;
+        z-index: 1;
+        font-size: 34px;
+        line-height: 1;
+        box-shadow: 10px 10px 10px rgba($black, 0.4);
+        font-weight: 300;
+        color: $red;
+
+        @include media('<tablet') {
+            font-size: 24px;
+            line-height: 1.2;
+        }
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            left: -4px;
+            top: -26px;
+            width: 6px;
+            height: 50px;
+            background: $red;
+        }
+
+        &:after {
+            height: 6px;
+            width: 50px;
+            top: -3px;
+            left: -28px;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// section offer
+.section-offer {
+    padding: 1px 0;
+    color: $white;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(#000, .89);
+    }
+
+    .box {
+        font-size: 34px;
+        line-height: 1;
+        font-weight: 700;
+        float: right;
+        width: 399px;
+        padding: 174px 36px 130px;
+        margin: -35px 0;
+        position: relative;
+        z-index: 2;
+
+        @include media('<tablet') {
+            float: none;
+            width: auto;
+            padding: 58px 26px 51px;
+            font-size: 24px;
+            line-height: 1.2;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: $red;
+            box-shadow: 10px 10px 10px rgba($black, 0.4);
+            z-index: -1;
+        }
+
+        .line {
+            &:after,
+            &:before {
+                content: '';
+                position: absolute;
+                right: -9999px;
+                left: -48px;
+                border: solid $white;
+
+                @include media('<tablet') {
+                    left: -10px;
+                }
+            }
+
+            &:before {
+                top: 116px;
+                left: -15px;
+                border-width: 1px 0 0;
+                z-index: -2;
+
+                @include media('<tablet') {
+                    top: 41px;
+                    left: -2px;
+                }
+            }
+
+            &:after {
+                border-width: 0 0 1px 1px;
+                top: 150px;
+                bottom: 93px;
+                z-index: -1;
+
+                @include media('<tablet') {
+                    top: 49px;
+                    bottom: 55px;
+                }
+            }
+        }
+
+        .plus {
+            @include media('<tablet') {
+                width: 12px;
+                height: 12px;
+                left: -16px;
+                top: 35px;
+            }
+        }
+
+        span {
+            font-weight: 300;
+        }
+    }
+
+    .txt {
+        float: left;
+        width: 43%;
+        position: relative;
+        z-index: 3;
+        font-size: 33px;
+        line-height: 1;
+        font-weight: 300;
+        text-transform: uppercase;
+        padding: 170px 0 66px;
+        text-align: center;
+
+        @include media('<desktop') {
+            font-size: 16px;
+        }
+
+        @include media('<tablet') {
+            float: none;
+            width: auto;
+            padding: 124px 0 92px;
+        }
+
+        span {
+            display: block;
+        }
+
+        .txt-lg {
+            font-size: 189px;
+            line-height: .84;
+            margin-bottom: -27px;
+
+            @include media('<desktop') {
+                font-size: 120px;
+                margin-bottom: -14px;
+            }
+        }
+
+        .txt-md {
+            font-size: 68px;
+            border: solid rgba($white, .4);
+            border-width: 1px 0;
+            line-height: .7;
+            padding-top: 21px;
+            margin-bottom: 7px;
+            display: inline-block;
+
+            @include media('<desktop') {
+                font-size: 48px;
+                padding-top: 14px;
+            }
+        }
+
+        .txt-sm {
+            letter-spacing: 10px;
+            padding-left: 11px;
+        }
+    }
+
+    .plus {
+        top: 92px;
+        left: -72px;
+    }
+
+    .plus-lg {
+        top: 0;
+        right: 39px;
+    }
+}
+
+// highlight
+.highlight {
+    font-weight: 700;
+}
+
+// job block
+.job-block {
+    padding:  203px 0 3px;
+    position: relative;
+    z-index: 100;
+
+    @include media('<desktop') {
+        padding-top: 140px;
+    }
+
+    @include media('<tablet') {
+        padding-top: 50px;
+    }
+
+    &:after {
+        content: "";
+        background: url('../images/bg-plus-icon.png') no-repeat;
+        width: 897px;
+        height: 174px;
+        position: absolute;
+        bottom: 0;
+        left: 42px;
+    }
+
+    > .container {
+        max-width: 1050px;
+        position: relative;
+        z-index: 100;
+    }
+
+    .top-content {
+        @extend %clearfix;
+        text-align: center;
+        font-size: 30px;
+        line-height: 0.9;
+        color: $cardinal;
+        margin-bottom: 26px;
+        font-weight: 300;
+        letter-spacing: -0.8px;
+
+        @include media('<tablet') {
+            font-size: 22px;
+            line-height: 1.1;
+        }
+
+        .holder {
+            float: left;
+        }
+
+        span {
+            display: block;
+
+            &.highlight {
+                font-size: 65px;
+                font-weight: 400;
+
+                @include media('<tablet') {
+                    font-size: 42px;
+                }
+            }
+
+            strong {
+                font-weight: 700;
+            }
+        }
+
+        p {
+
+            @include media('<tablet') {
+                margin: 0;
+            }
+        }
+    }
+
+    .btm-content {
+        @extend %clearfix;
+        padding: 0 66px;
+        font-size: 33px;
+        line-height: 1.03;
+        color: $white;
+        position: relative;
+        bottom: -130px;
+
+        @include media('<tablet') {
+            bottom: -80px;
+            padding: 0 20px;
+            font-size: 24px;
+            line-height: 1.2;
+        }
+
+        .content-holder {
+            max-width: 495px;
+            padding-left: 58px;
+            float: left;
+            position: relative;
+
+            @include media('<xs-phone') {
+                padding-left: 20px;
+            }
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                left: -3px;
+                top: -78px;
+                width: 6px;
+                height: 50px;
+                background: $cardinal;
+            }
+
+            &:after {
+                height: 6px;
+                width: 50px;
+                top: -57px;
+                left: -25px;
+            }
+        }
+
+        .img-text-block {
+            background: $cardinal;
+            float: left;
+            box-shadow: 10px 10px 10px rgba($black, 0.4);
+        }
+
+        .img-wrap {
+            margin: -54px 0 0 -57px;
+            padding-right: 31px;
+
+            @include media('<xs-phone') {
+                margin: -54px 0 0 -19px;
+                padding-right: 20px;
+            }
+
+            img {
+                vertical-align: top;
+            }
+        }
+
+        .txt-wrap {
+            padding: 82px 58px 70px;
+
+            @include media('<tablet') {
+                padding: 40px 30px;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+// hire block
+.hire-block {
+    padding: 184px 0 61px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+    @include media('<tablet') {
+        padding: 80px 0 60px;
+    }
+
+    > .container {
+        max-width: 1024px;
+
+        @include media('<desktop') {
+            padding: 0 30px;
+        }
+
+        @include media('<tablet') {
+            padding: 0 15px 0 30px;
+        }
+    }
+
+    .top-content {
+        @extend %clearfix;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+            content: "";
+            background: url('../images/bg-plus-red.png') no-repeat 0 0;
+            position: absolute;
+            bottom: -278px;
+            right: -14px;
+            width: 726px;
+            height: 726px;
+        }
+    }
+
+    .img-wrap {
+        box-shadow: 10px 10px 10px rgba($black, 0.4);
+        float: left;
+        width: 64.8%;
+        position: relative;
+        z-index: 1;
+        margin-top: 61px;
+
+        @include media('<tablet') {
+            width: auto;
+            float: none;
+            margin-right: 30px;
+        }
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            left: -3px;
+            bottom: -25px;
+            width: 6px;
+            height: 50px;
+            background: $white;
+        }
+
+        &:after {
+            height: 6px;
+            width: 50px;
+            bottom: -3px;
+            left: -25px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .text-box {
+        width: calc(35.2% + 190px);
+        border: 42px solid rgba($white, 0.7);
+        color: $white;
+        font-size: 33px;
+        line-height: 1.03;
+        float: left;
+        position: relative;
+        z-index: 3;
+        margin-left: -190px;
+
+        @include media('<tablet') {
+            width: calc(100% - 30px);
+            float: none;
+            margin: -80px 0 0 30px;
+            border-width: 20px;
+            font-size: 24px;
+            line-height: 1.2;
+        }
+
+        .tbl {
+            width: 100%;
+            height: 456px;
+            display: table;
+            background: #cd2128;
+            padding: 38px 42px 38px 38px;
+            letter-spacing: -0.9px;
+
+            @include media('<tablet') {
+                padding: 40px 20px;
+                height: auto;
+            }
+
+            .tc {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+
+        p {
+            margin: 0;
+
+            + p {
+                margin-top: 35px;
+            }
+        }
+    }
+
+    .btm-content {
+        @extend %clearfix;
+        padding: 0 130px;
+
+        @include media('<tablet') {
+            padding: 0 0 0 60px;
+        }
+
+        @include media('<xs-tablet') {
+            padding: 0 40px 0 0;
+        }
+
+        .bordered-box {
+            float: left;
+            max-width: 400px;
+            border: solid rgba($white, 0.7);
+            border-width: 1px 0 0 1px;
+            color: $white;
+            font-size: 33px;
+            line-height: 1.03;
+            margin-top: -124px;
+            position: relative;
+            z-index: 2;
+            position: relative;
+
+            @include media('<tablet') {
+                margin-top: -50px;
+                font-size: 24px;
+                line-height: 1.2;
+            }
+
+            &:before,
+            &:after {
+                content: "";
+                background: rgba($white, 0.7);
+                height: 1px;
+                position: absolute;
+                left: 0;
+                right: 34px;
+                bottom: 0;
+            }
+
+            &:before {
+                height: auto;
+                width: 1px;
+                left: auto;
+                right: 0;
+                top: 0;
+                bottom: 34px;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            .holder {
+                padding: 210px 30px 55px 41px;
+                position: relative;
+                letter-spacing: -0.3px;
+
+                @include media('<tablet') {
+                    padding: 80px 20px 40px;
+                }
+
+                &:before,
+                &:after {
+                    content: "";
+                    width: 48px;
+                    height: 1px;
+                    background: rgba($white, 0.7);
+                    position: absolute;
+                    bottom: 0;
+                    right: -24px;
+                }
+
+                &:after {
+                    width: 1px;
+                    height: 48px;
+                    right: 0;
+                    bottom: -24px;
+                }
+            }
+        }
+    }
+}
+
+// opportunity block
+.opportunity-block {
+    padding: 86px 0 30px;
+    position: relative;
+
+    &:before {
+        content: "";
+        background: rgba($black, 0.15);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    > .container {
+        max-width: 1032px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .content-holder {
+        max-width: 469px;
+        float: right;
+
+        @include media('<xs-phone') {
+            max-width: none;
+        }
+    }
+
+    .top-block {
+        @extend %clearfix;
+        padding-right: 25px;
+
+        @include media('<tablet') {
+            padding-right: 0;
+        }
+    }
+
+    .white-box {
+        background: $white;
+        box-shadow: 8px 5px 10px rgba($black, 0.4);
+        text-align: right;
+        color: $cardinal;
+        position: relative;
+
+        &.big {
+            font-size: 41px;
+            line-height: 0.9;
+            text-transform: uppercase;
+            font-weight: 700;
+            max-width: 196px;
+            float: left;
+            padding: 12px 13px 1px;
+            z-index: 2;
+        }
+
+        &.small {
+            max-width: 148px;
+            font-size: 23px;
+            line-height: 0.9;
+            padding: 27px 26px 19px;
+            font-weight: 700;
+            margin-top: -5px;
+            z-index: 3;
+
+            &:after {
+                content: "";
+                background: url('../images/ico-arrow-down.png') no-repeat;
+                width: 38px;
+                height: 38px;
+                position: absolute;
+                left: 100%;
+                bottom: 0;
+                margin: 0 0 -4px -6px;
+            }
+        }
+    }
+
+    .red-box {
+        float: left;
+        background: $cardinal;
+        color: $white;
+        max-width: 260px;
+        font-size: 29px;
+        line-height: 0.9;
+        padding: 42px 30px 30px 34px;
+        position: relative;
+        z-index: 1;
+        margin: 30px 0 0 -12px;
+        font-weight: 200;
+
+        @include media('<xs-tablet') {
+            margin: -20px 0 0 -12px;
+        }
+
+        @include media('<phone') {
+            float: right;
+        }
+    }
+
+    .btm-block {
+        width: 343px;
+        float: right;
+        clear: both;
+        text-align: left;
+        padding-right: 25px;
+
+        @include media('<xs-phone') {
+            width: auto;
+        }
+    }
+
+    .btn-wrap {
+        margin-top: 22px;
+
+        a {
+            display: inline-block;
+            vertical-align: top;
+            background: $cardinal;
+            color: $white;
+            font-size: 25px;
+            line-height: 1;
+            color: $white;
+            font-weight: 700;
+            padding: 15px 95px 5px 45px;
+            position: relative;
+            text-transform: uppercase;
+
+            &:hover {
+                background: darken($cardinal, 10%);
+            }
+
+            &:after {
+                content: "";
+                background: $white;
+                width: 53px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+            }
+
+            &:before {
+                content: "";
+                background: url('../images/ico-arrow-right.png') no-repeat;
+                width: 25px;
+                height: 23px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 16px;
+                z-index: 1;
+            }
+        }
+    }
+
+    .text-wrap {
+        float: right;
+        max-width: 384px;
+        text-align: center;
+        font-size: 33px;
+        line-height: 1;
+        color: $white;
+        text-transform: uppercase;
+        font-weight: 300;
+        padding-top: 45px;
+    }
+}
+
+// trusted company block
+.trusted-company-block {
+    margin-bottom: -70px;
+    top: -45px;
+    position: relative;
+    z-index: 100;
+
+    .holder {
+        max-width: 816px;
+        margin: 0 auto;
+        display: flex;
+        margin: 0 auto;
+        background: $white;
+        z-index: 10;
+
+        @include media('<xs-tablet') {
+            display: block;
+        }
+    }
+
+    .title-wrap {
+        display: flex;
+        align-items: center;
+        width: 226px;
+        background: #a52734;
+        padding: 27px 20px 19px;
+        justify-content: center;
+
+        @include media('<desktop') {
+            width: 180px;
+        }
+
+        @include media('<xs-tablet') {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .title {
+        text-transform: uppercase;
+        color: $white;
+        font-size: 22px;
+        line-height: 1;
+    }
+
+    .list-wrap {
+        display: flex;
+        align-items: center;
+        padding: 15px 20px;
+        width: calc(100% - 226px);
+
+        @include media('<desktop') {
+            width: calc(100% - 180px);
+        }
+
+        @include media('<xs-tablet') {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .list {
+        @extend %listreset;
+        text-align: center;
+        margin: 0 -5px;
+        letter-spacing: -5px;
+        width: 100%;
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 5px;
+            letter-spacing: 0;
+        }
+
+        img {
+            vertical-align: top;
+        }
+    }
+}

@@ -5,7 +5,7 @@ jQuery(document).ready(function($){
 // mobile menu init
 function initMobileNav() {
 	var navopener = jQuery('.nav-opener'),
-		navwrap   = jQuery('#nav'),
+		navwrap   = jQuery('.nav'),
 		navactive = 'nav-active';
 
 	navopener.click(function() {
