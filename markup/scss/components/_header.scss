@@ -1,0 +1,146 @@
+// ---------------------------------------------------------===
+// Header styles
+// ---------------------------------------------------------===
+
+// header
+#header {
+    @include media('>=tablet') {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+    }
+
+    .container {
+        max-width: 962px;
+        padding: 0;
+        background: linear-gradient(to bottom, #c12331 0%,#9a1723 100%);
+    }
+
+    .logo {
+        float: left;
+        width: 148px;
+        text-align: center;
+        padding: 14px;
+        background: linear-gradient(to bottom, #fff 0%,#fff 3%,#fcfcfc 3%,#bcbdc0 100%);
+
+        @include media('<tablet') {
+            width: 89px;
+        }
+    }
+}
+
+// nav
+.nav {
+    margin-left: 148px;
+    background: linear-gradient(to bottom, #c12331 0%,#9a1723 100%);
+    font-size: 16px;
+    text-transform: uppercase;
+
+    @include media('<tablet') {
+        @include animate(left);
+        position: fixed;
+        left: -280px;
+        top: 0;
+        bottom: 0;
+        width: 280px;
+        margin-left: 0;
+        z-index: 999;
+
+        .nav-active & {
+            left: 0;
+        }
+    }
+
+    ul {
+        @extend %listreset;
+
+        @include media('>=tablet') {
+            display: table;
+            width: 100%;
+        }
+
+        li {
+            @include media('>=tablet') {
+                display: table-cell;
+                border-right: 1px solid rgba(191, 30, 44, 0.52);
+                box-shadow: 1px 0 0 0 rgba(144, 13, 13, 0.37)
+            }
+        }
+
+        .active a,
+        a:hover {
+            background: linear-gradient(to bottom, #9a1723 0%,#c12331 100%);
+        }
+
+        a {
+            display: block;
+            padding: 27px 14px 21px;
+            text-align: center;
+            text-decoration: none;
+            color: #e6b7a9;
+        }
+    }
+}
+
+// nav opener
+.nav-opener {
+    float: right;
+    width: 24px;
+    height: 17px;
+    position: relative;
+    margin: 17px 18px 0 0;
+
+    @include media('>=tablet') {
+        display: none;
+    }
+
+    &:before,
+    &:after,
+    & span {
+        background: $white;
+        border-radius: 4px;
+        position: absolute;
+        top: 9px;
+        left: 0;
+        right: 0;
+        height: 3px;
+        margin-top: -2px;
+        transition: all 0.2s linear;
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        top: 2px;
+    }
+
+    &:after {top: 16px;}
+
+    &:hover {
+        &:before,
+        &:after,
+        span {
+            background: $white;
+        }
+    }
+
+    .nav-active & {
+        &:after,
+        &:before {
+            transform: rotate(45deg);
+            top: 50%;
+            left: 0;
+            right: 0;
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+        }
+
+        span {
+            opacity:0 ;
+        }
+    }
+}

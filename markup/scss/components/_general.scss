@@ -1,9 +1,14 @@
+// ---------------------------------------------------------===
+// General styles
+// ---------------------------------------------------------===
+
 // container
 .container {
     @extend %clearfix;
     max-width: 1008px;
     padding: 0 15px;
     margin: 0 auto;
+    width: 100%;
 }
 
 // wrapper
@@ -11,4 +16,65 @@
     overflow: hidden;
     position: relative;
     width: 100%;
+}
+
+// bg cover
+[style*="background-image"] {
+    background-size: cover;
+    background-position: center center;
+}
+
+// plus
+.plus {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        background: $white;
+    }
+
+    &:before {
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 1px;
+    }
+
+    &:after {
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 1px;
+    }
+}
+
+// plus lg
+.plus-lg {
+    position: absolute;
+    z-index: -1;
+
+    &:after {
+        content: '';
+        width: 727px;
+        height: 727px;
+        background: url('../images/plus.png') no-repeat 0 0/cover;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+
+        @include media('<desktop') {
+            width: 520px;
+            height: 520px;
+        }
+
+        @include media('<tablet') {
+            width: 240px;
+            height: 240px;
+        }
+    }
 }
